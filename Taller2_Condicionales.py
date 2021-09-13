@@ -45,12 +45,27 @@ elif(num_azar <= 74):
 else:
     descuento2 = precio2 * 0.2
     total2 = precio2 - descuento2
-    print(f"El total a pagar es: ${total2}")
-    print(f"El descuento aplicado es: ${descuento2}")
+    print(f'El total a pagar es: ${total2}')
+    print(f'El descuento aplicado es: ${descuento2}')
 
+# 3.
 
-
-
+monto_inicial = float(input('Digite el total del monto a financiar: $'))
+intereses = 0
+# Condicional para que los datos digitados sean válidos 
+if(monto_inicial <= 0):
+    print('Los datos no pueden ser menor o igual a 0')
+# Condicional para intereses con un monto inicial menor o igual a $50.000
+elif(monto_inicial <= 50000):
+    intereses = 0.03
+    cuota = monto_inicial * intereses
+# Condicional para intereses con un monto inicial mayor a $50.000
+else:
+    intereses = 0.02
+    cuota = monto_inicial * intereses
+    print(f'El total del monto a financiar es: ${monto_inicial}')
+    print(f'El porcentaje aplicado es: {intereses} ')
+    print(f'El valor de la cuota es: ${cuota}')
 
 
 
