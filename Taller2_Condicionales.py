@@ -7,6 +7,7 @@ Created on Sun Sep 12 13:53:51 2021
 
 # 1.
 
+# Precio por el valor de camisa
 precio = float(input('Digite el precio de la camisa: $'))
 cantidad = int(input('Digite cantidad de camisas a comprar: '))
 subtotal = precio * cantidad
@@ -31,6 +32,7 @@ else:
 
 # 2.
 
+# Precio2 por el total por la compra del mercado
 precio2 = float(input('Digite el total de la compra: $'))
 num_azar = int(input('Digite un número al azar mayor a 0: '))
 descuento2 = 0
@@ -100,7 +102,23 @@ elif(promedio > 170):
 else:
     print('Todo esta en orden y no aplica multa')
  
+# 5.
 
+# Precio3 por el valor del terreno o automóvil
+precio3 = float(input('Digite el precio del terreno o automovil: '))
+porcentaje_incremento_terrenal = float(input('Digite el porcentaje del incremento anual del terreno: '))
+porcentaje_devaluacion_automovil = float(input('Digite el porcentaje de la devaluación anual del automovil: ' ))
+
+incremento = (((precio3 * porcentaje_incremento_terrenal) / 100) * 3) / 2
+devaluacion = ((precio3 * porcentaje_devaluacion_automovil) / 100) * 3
+
+print(f'La mitad del incremento del terreno en 3 años es: ${incremento}')
+print(f'La devaluacion del automovil en 3 años es: ${devaluacion}')
+# Condicional para determinar qué es mejor comprar
+if(devaluacion < incremento):
+    print('Debería comprar el automóvil')
+else:
+    print('Debería comprar el terreno')
 
 
 
