@@ -10,7 +10,7 @@ Created on Sun Sep 12 13:53:51 2021
 # Precio por el valor de camisa
 precio = float(input('Digite el precio de la camisa: $'))
 cantidad = int(input('Digite cantidad de camisas a comprar: '))
-# Subtotal para aplicar descuento
+# Subtotal para aplicar descuento a camisas
 subtotal = precio * cantidad
 # descuento para que aplique a la compra de las camisas
 descuento = 0
@@ -136,7 +136,7 @@ precio4 = 11000
 # cantidad2 para el número de computadores
 cantidad2 = int(input('Digite cantidad de computadores a comprar: '))
 
-# Subtotal2 para aplicar descuentos
+# subtotal2 para aplicar descuentos a computadores
 subtotal2 = precio4 * cantidad2
 
 # descuento3 para que aplique a la compra de computadores
@@ -153,21 +153,56 @@ elif(cantidad2 < 5):
     descuento3 = subtotal2 * 0.1
     total3 = subtotal2 - descuento3
     print(f'El total a pagar es de: ${total3}')
-    print(f"El descuento aplicado es de: ${descuento3}")
+    print(f'El descuento aplicado es de: ${descuento3}')
 # Condicional para descuento del 20% si las unidades compradas están entre 
 # mayor o igual a 5 y menor a 10 unidades
 elif(cantidad2 >= 5 and cantidad2 < 10):
     descuento3 = subtotal2 * 0.2
     total3 = subtotal2 - descuento3
     print(f'El total a pagar es de: ${total3}')
-    print(f"El descuento aplicado es de: ${descuento3}")
-# Condicional para el descuento po compras mayores o iguales a 10 unidades 
+    print(f'El descuento aplicado es de: ${descuento3}')
+# Condicional para el descuento por compras mayores o iguales a 10 unidades 
 else:
     descuento3 = subtotal2 * 0.4
     total3 = subtotal2 - descuento3
-    print(f"El total a pagar es: ${total3}")
-    print(f"El descuento aplicado es de: ${descuento3}")
+    print(f'El total a pagar es: ${total3}')
+    print(f'El descuento aplicado es de: ${descuento3}')
 
+# 7.
+
+# precio5 para valor del estereo
+precio5 = float(input('Digite el precio del estéreo: $'))
+marca = (input('Digite la marca del estéreos a comprar: '))
+
+# descuento4 para que aplique a la compra de estéreos
+descuento4 = 0
+descuento_marca = 0
+iva = 0.16
+
+# total4 para precio a pagar por los estéreos
+total4 = 0
+
+# subtotal3 para aplicar descuentos a estéreos
+subtotal3 = 0
+
+# Condicional para que los datos digitados sean válidos
+if(precio5 < 0):
+    print('Los datos no pueden ser menor a 0')
+# Condicional para descuento si el estéreo cuesta más de $2.000
+else:
+    if(precio5 >= 2000):
+        descuento4 = precio5 * 0.1
+# Condicional para descuento por marca "nosy"
+    if(marca == "Nosy" or marca == "nosy" or marca == "NOSY"):
+        descuento_marca = precio5 * 0.05
+    subtotal3 = precio5 - descuento4 - descuento_marca
+    valor_iva = subtotal3 * iva
+    total4 = subtotal3 + valor_iva
+    print(f"El descuento aplicado por compra es: ${descuento4}")
+    print(f"El descuento aplicado por marca es: ${descuento_marca}")
+    print(f"El subtotal es: ${subtotal3}")
+    print(f"El iva(16%) es: ${valor_iva}")
+    print(f"El total a pagar es de: ${total4} por el estéreo")
 
 
 
