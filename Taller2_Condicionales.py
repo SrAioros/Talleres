@@ -10,8 +10,12 @@ Created on Sun Sep 12 13:53:51 2021
 # Precio por el valor de camisa
 precio = float(input('Digite el precio de la camisa: $'))
 cantidad = int(input('Digite cantidad de camisas a comprar: '))
+# Subtotal para aplicar descuento
 subtotal = precio * cantidad
+# descuento para que aplique a la compra de las camisas
 descuento = 0
+# total para precio a pagar por las camisas
+total = 0
 
 # Condicional para que los datos digitados sean válidos
 if(precio <= 0 or cantidad <= 0):  
@@ -35,7 +39,11 @@ else:
 # Precio2 por el total por la compra del mercado
 precio2 = float(input('Digite el total de la compra: $'))
 num_azar = int(input('Digite un número al azar mayor a 0: '))
+# descuento2 para que aplique al mercado
 descuento2 = 0
+# total2 para el precio a pagar por el mercado
+total2 = 0
+
 # Condicional para que los datos digitados sean válidos 
 if(precio2 <= 0 or num_azar <= 0):
     print('Los datos no pueden ser menor o igual a 0')
@@ -119,6 +127,46 @@ if(devaluacion < incremento):
     print('Debería comprar el automóvil')
 else:
     print('Debería comprar el terreno')
+
+# 6. 
+
+# Precio4 para el valor del computador
+precio4 = 11000
+
+# cantidad2 para el número de computadores
+cantidad2 = int(input('Digite cantidad de computadores a comprar: '))
+
+# Subtotal2 para aplicar descuentos
+subtotal2 = precio4 * cantidad2
+
+# descuento3 para que aplique a la compra de computadores
+descuento3 = 0
+
+# total3 para precio a pagar por los computadores
+total3 = 0
+
+# Condicional para que los datos digitados sean válidos
+if(precio4 < 0):
+    print('Los datos no pueden ser menor a 0')
+# Condicional para descuento del 10% al ser menos de 5 unidades compradas
+elif(cantidad2 < 5):
+    descuento3 = subtotal2 * 0.1
+    total3 = subtotal2 - descuento3
+    print(f'El total a pagar es de: ${total3}')
+    print(f"El descuento aplicado es de: ${descuento3}")
+# Condicional para descuento del 20% si las unidades compradas están entre 
+# mayor o igual a 5 y menor a 10 unidades
+elif(cantidad2 >= 5 and cantidad2 < 10):
+    descuento3 = subtotal2 * 0.2
+    total3 = subtotal2 - descuento3
+    print(f'El total a pagar es de: ${total3}')
+    print(f"El descuento aplicado es de: ${descuento3}")
+# Condicional para el descuento po compras mayores o iguales a 10 unidades 
+else:
+    descuento3 = subtotal2 * 0.4
+    total3 = subtotal2 - descuento3
+    print(f"El total a pagar es: ${total3}")
+    print(f"El descuento aplicado es de: ${descuento3}")
 
 
 
