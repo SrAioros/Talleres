@@ -61,6 +61,7 @@ else:
 # 3.
 
 monto_inicial = float(input('Digite el total del monto a financiar: $'))
+# intereses para lo que le corresponde al banco por financiar el monto solicitado
 intereses = 0
 # Condicional para que los datos digitados sean válidos 
 if(monto_inicial <= 0):
@@ -187,7 +188,7 @@ subtotal3 = 0
 
 # Condicional para que los datos digitados sean válidos
 if(precio5 < 0):
-    print('Los datos no pueden ser menor a 0')
+    print('Los datos no pueden ser menor o igual a 0')
 # Condicional para descuento si el estéreo cuesta más de $2.000
 else:
     if(precio5 >= 2000):
@@ -204,6 +205,41 @@ else:
     print(f"El iva(16%) es: ${valor_iva}")
     print(f"El total a pagar es de: ${total4} por el estéreo")
 
+# 8.
+
+# precio6 para el valor de la pieza
+precio6 = float(input("Digite el costo de la pieza: $"))
+# cantidad3 para el número de  piezas
+cantidad3 = int(input("Digite el numero de piezas: "))
+# subtotal4 para aplicar descuentos a estéreos
+subtotal4 = cantidad3 * precio6
+
+inversion = 0
+prestamo_banco = 0
+credito = 0
+
+# Condicional para que los datos digitados sean válidos
+if(precio6 <= 0):
+    print('Los datos no pueden ser menor o igual a 0')
+# Condicional para efectuar inversion de 55%, prestamos del 30% y crédito al 
+# 15% faltante del precio de las piezas
+elif(subtotal4 > 500000):
+    inversion = subtotal4 * 0.55
+    prestamo_banco = subtotal4 * 0.30
+    credito = subtotal4 * 0.15
+# Condicional para efectuar inversion del 70% sin prestamos bancario y crédito
+# del 30% por las piezas
+else:
+    inversion = subtotal4 * 0.70
+    prestamo_banco = 0
+    credito = subtotal4 * 0.30
+# intereses2 para el valor que le corresponde al crédito solicitado por las piezas
+intereses2 = credito * 0.20
+
+print(f"La inversion es de: ${inversion}")
+print(f"El prestamo del banco es de: ${prestamo_banco}")
+print(f"El crédito a pagar de: ${credito}")
+print(f"El interés por el crédito es: ${intereses2}")
 
 
 
