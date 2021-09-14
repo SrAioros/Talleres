@@ -247,25 +247,43 @@ print(f'El interés por el crédito es: ${intereses2}')
 num1 = float(input('Digite el primer numero: '))
 num2 = float(input('Digite el segundo numero: '))
 result = 0
-
+# Condicional para multiplicar numeros iguales
 if(num1 == num2):
     result = num1 * num2
     print('Los valores son iguales, se procede a multiplicar:')
     print(f'{num1} * {num2} = {result}')
-    
+# Condicional para sumar si el número 1 es menor al número 2
 elif(num1 < num2):
     result = num1 + num2
     print('El número 1 es menor al número 2, se procede a sumar')
     print(f'{num1} + {num2} = {result}')
+# Condicional para restar si el número 1 es mayor al número 2    
 else:
     result = num1 - num2
     print('El número 1 es mayor al número 2, se procede a restar')
     print(f'{num1} - {num2} = {result}')
 
+# 10.
 
+n1 = float(input('Digite el primer número: '))
+n2 = float(input('Digite el segundo número: '))
+n3 = float(input('Digite el tercer número: '))
 
-
-
+# Condicional para saber si n1 es mayor que los demás
+if(n1 > n2 and n1 > n3):
+    mayor = n1
+    print(f'El número mayor es el primer valor dígitado: {mayor}')
+# Condicional para saber si n2 es mayor que los demás  
+elif(n2 > n1 and n2 > n3):
+    mayor = n2
+    print(f'El número mayor es el segundo valor dígitado: {mayor}' ) 
+# Condicional para saber si n3 es mayor que los demás          
+elif(n3 > n1 and n3 > n2):
+    mayor = n3
+    print(f'El número mayor es el tercer valor dígitado: {mayor}')
+# Condicional para mostrar que los 3 números son iguales   
+else:
+    print('los números son iguales')
 
 
 
