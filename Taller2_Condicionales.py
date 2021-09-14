@@ -236,10 +236,31 @@ else:
 # intereses2 para el valor que le corresponde al crédito solicitado por las piezas
 intereses2 = credito * 0.20
 
-print(f"La inversion es de: ${inversion}")
-print(f"El prestamo del banco es de: ${prestamo_banco}")
-print(f"El crédito a pagar de: ${credito}")
-print(f"El interés por el crédito es: ${intereses2}")
+print(f'La inversion es de: ${inversion}')
+print(f'El prestamo del banco es de: ${prestamo_banco}')
+print(f'El crédito a pagar de: ${credito}')
+print(f'El interés por el crédito es: ${intereses2}')
+
+
+# 9.
+
+num1 = float(input('Digite el primer numero: '))
+num2 = float(input('Digite el segundo numero: '))
+result = 0
+
+if(num1 == num2):
+    result = num1 * num2
+    print('Los valores son iguales, se procede a multiplicar:')
+    print(f'{num1} * {num2} = {result}')
+    
+elif(num1 < num2):
+    result = num1 + num2
+    print('El número 1 es menor al número 2, se procede a sumar')
+    print(f'{num1} + {num2} = {result}')
+else:
+    result = num1 - num2
+    print('El número 1 es mayor al número 2, se procede a restar')
+    print(f'{num1} - {num2} = {result}')
 
 
 
