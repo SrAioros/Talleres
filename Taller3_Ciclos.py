@@ -93,3 +93,32 @@ def porcentajesAnimales():
         print(f'Animal estudiado: {animal}')        
         print(f'{calculo3} % de 3 o mas años')     
         
+
+# 3. 
+
+# Al ejecutar calcularSalario() poner el número de obreros que ingresa a la 
+# empresa como parametro
+def calcularSalario(num_obreros):
+    
+    salario = 0
+    horas = 0
+    h_extras = 0
+    obrero = 1
+# Condicional de verificación de datos
+    if(num_obreros >= 1):
+# Ciclo para pedir las horas trabajadas a cada obrero de acuerdo al parámetro
+        for obrero in range(0,num_obreros + 1):
+            horas = int(input('Digite el número de horas trabajadas:'))
+# Condicional para pagar horas trabajadas normales o horas extras    
+            if horas >=1 and horas <=40:
+                salario = float(horas * 20)                
+            else:
+                h_extras = horas - 40
+                salario = 40 * 20 + (h_extras * 25)
+                
+            obrero = obrero + 1    
+            print(f'El salario del obrero {obrero} es:  {salario}')   
+    else:
+        print('Digite un número válido en el parámetro')
+
+
