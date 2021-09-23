@@ -160,7 +160,21 @@ def promedioEdad(total_alumnos):
     else:
         print(f'El promedio de edades de Mujeres es de: {promedioF}')
 
+# 5.
 
+# Al ejecutar menor(num) poner la cantidad de números totales para sacar 
+# el num menor
+def menor(num):
+    i  = 1
+    for i in range(1,num + 1):
+        n = int(input('Digite un número: '))
+        if(i ==1):
+            num_menor = n
+        elif(n < num_menor):
+            num_menor = n  
+        i= i + 1       
+    print(f'El número menor es: {num_menor}')
+        
 
 
 
