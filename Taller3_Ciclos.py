@@ -38,3 +38,58 @@ def ingresoAutos(num_autos):
     print(f'La cantidad de autos con calcomania Roja es: {roja}')
     print(f'La cantidad de autos con calcomania Verde es: {verde}')
     print(f'La cantidad de autos con calcomania Azul es: {azul}')
+
+# 2.
+
+# Al ejecutar porcentajesAnimales() sin parametros pide a qué tipo de animales
+# se va a realizar el estudio
+def porcentajesAnimales():
+    
+    categoria1 = 0
+    categoria2 = 0
+    categoria3 = 0
+    print('1 = Elefantes')
+    print('2 = Jirafas')
+    print('3 = Chimpances')
+    poblacion = int(input('De acuerdo al menú anterior elija el animal que se estudiará: '))
+ 
+# Condicional para que de acuerdo al animal elegido se tome el número de muestras
+# correspondiente
+    if poblacion > 0:
+       if poblacion == 1:
+           animal = 'Elefantes'
+           total = 20
+       elif poblacion == 2:
+            animal = 'Jirafas'
+            total = 15
+       elif poblacion == 3:
+            animal = 'Chimpances'
+            total = 40     
+    else:
+        print('Digite un numero dentro del rango permitido del 1 al 3')
+    
+# Ciclo que ejecuta el número de edades a pedir de acuerdo al animal 
+    for i in range(1,total + 1):
+        edad = int(input('Ingrese la edad del animal: '))
+        if(edad >= 0 and edad <= 1):
+            categoria1= categoria1 + 1
+        elif(edad > 1 and edad < 3):
+            categoria2 = categoria2 + 1
+        elif(edad >= 3):
+            categoria3 = categoria3 + 1   
+# Cálculo de porcentajes
+    calculo1 = float((categoria1/total))*100
+    calculo2 = float((categoria2/total))*100
+    calculo3 = float((categoria3/total))*100
+    
+# Imprime el animal estudiado, rango de edad y porcentaje 
+    if(edad >= 0 and edad <= 1):        
+        print(f'Animal estudiado: {animal}')
+        print (f'{calculo1} % de 0 a 1 año' )       
+    elif(edad > 1 and edad < 3):    
+        print(f'Animal estudiado: {animal}')
+        print(f'{calculo2} % de mas de 1 año y menos de 3')        
+    elif(edad >= 3):
+        print(f'Animal estudiado: {animal}')        
+        print(f'{calculo3} % de 3 o mas años')     
+        
