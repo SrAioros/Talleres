@@ -177,6 +177,83 @@ def menor(num):
         
 
 
+# 6.
+
+def calcularPeso():
+    
+    peso_miembro1 = float(input('Digite el peso promedio de la última reunión del miembro 1: '))
+    peso_miembro2 = float(input('Digite el peso promedio de la última reunión del miembro 2: '))
+    peso_miembro3 = float(input('Digite el peso promedio de la última reunión del miembro 3: '))
+    peso_miembro4 = float(input('Digite el peso promedio de la última reunión del miembro 4: '))
+    peso_miembro5 = float(input('Digite el peso promedio de la última reunión del miembro 5: '))
+
+    bascula = 1
+    suma1 = 0
+    suma2 = 0
+    suma3 = 0
+    suma4 = 0
+    suma5 = 0
+    
+    for bascula in range(1, 10 + 1):
+        peso = float(input(f'Digite el peso de la bascula {bascula} para el  miembro 1: '))
+        suma1 = peso + suma1
+        promedio1 = suma1 / 10
+        bascula = bascula + 1
+        
+    print(promedio1)    
+    if(peso_miembro1 < promedio1):
+        print('El miembro 1 subio de peso')
+    else:
+        print('El miembro 1 bajó de peso')
+
+    for bascula in range(1, 10 + 1):
+        peso = float(input(f'Digite el peso de la bascula {bascula} para el miembro 2: '))
+        suma2 = peso + suma2
+        promedio2 = suma2 / 10
+        bascula = bascula + 1
+        
+    print(promedio2)    
+    if(peso_miembro2 < promedio2):
+        print('El miembro 2 subio de peso')
+    else:
+        print('El miembro 2 bajó de peso')
+
+    for bascula in range(1, 10 + 1):
+        peso = float(input(f'Digite el peso de la bascula {bascula} para el miembro 3: '))
+        suma3 = peso + suma3
+        promedio3 = suma3 / 10
+        bascula = bascula + 1
+        
+    print(promedio3)    
+    if(peso_miembro3 < promedio3):
+        print('El miembro 3 subio de peso')
+    else:
+        print('El miembro 3 bajó de peso')
+
+    for bascula in range(1, 10 + 1):
+        peso = float(input(f'Digite el peso de la bascula {bascula} para el miembro 4: '))
+        suma4 = peso + suma4
+        promedio4 = suma4 / 10
+        bascula = bascula + 1
+        
+    print(promedio4)    
+    if(peso_miembro4 < promedio4):
+        print('El miembro 4 subio de peso')
+    else:
+        print('El miembro 4 bajó de peso')
+
+    for bascula in range(1, 10 + 1):
+        peso = float(input(f'Digite el peso de la bascula {bascula} para el miembro 5: '))
+        suma5 = peso + suma5
+        promedio5 = suma5 / 10
+        bascula = bascula + 1
+        
+    print(promedio5)    
+    if(peso_miembro5 < promedio5):
+        print('El miembro 5 subio de peso')
+    else:
+        print('El miembro 5 bajó de peso')
+
 
 
 
