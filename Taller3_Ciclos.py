@@ -122,3 +122,48 @@ def calcularSalario(num_obreros):
         print('Digite un número válido en el parámetro')
 
 
+# 4.
+
+# Al ejecutar promedioEdad(total_alumnos) poner la cantidad de alumnos 
+# como parametro
+def promedioEdad(total_alumnos):
+    poblacion = 0
+    total_edadesM = 0 
+    total_edadesF = 0
+    total_hombres = 0
+    total_mujeres = 0
+    
+    for poblacion in range(1,total_alumnos + 1):
+        edad = int(input('Digite la edad: '))
+        genero = input('Ingrese el género (M o F): ')
+        
+        if(genero == 'M' or genero == 'm'):
+            total_hombres = total_hombres + 1
+            total_edadesM =  total_edadesM + edad
+            promedioM = total_edadesM / total_hombres
+            
+        elif(genero == 'F'  or genero == 'f'):
+            total_mujeres = total_mujeres + 1
+            total_edadesF = total_edadesF + edad
+            promedioF = total_edadesF / total_mujeres
+        poblacion = poblacion + 1
+        
+        promedio_global = (total_edadesM + total_edadesF)/total_alumnos
+        
+    print(f'El promedio de edades de todo el grupo es de: {promedio_global}')    
+    if(total_edadesM == 0):
+        print('No hay hombres en la poblacion')
+    else:
+        print(f'El promedio de edades de Hombres es de: {promedioM}')
+    if(total_edadesF == 0):
+        print('No hay mujeres en la poblacion')
+    else:
+        print(f'El promedio de edades de Mujeres es de: {promedioF}')
+
+
+
+
+
+
+
+
